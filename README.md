@@ -11,9 +11,13 @@ Create a chaotic clicker game, where you can click to your heart's content.
 - [Coding Tips and Tricks](#coding-tips-and-tricks)
 - [Project Steps](#project-steps)
     - [TODO 0 - Where to Code](#todo-0---where-to-code)
-    - [TODO 1 - Add <<<BLANK>>>](#todo-1---add-<<<BLANK>>)
-    - [TODO 2 - Add a Click Listener](#todo-2---add-a-click-listener)
-    - [TODO 3 - Add Functionality to <<<BLANK>>>](#todo-3---add-functionality-to-<<<BLANK>>>)
+    - [TODO 1 - Add HTML Attributes](#todo-1---add-attributes-to-your-game)
+    - [TODO 2 - Add an Image](#todo-2---add-an-image-to-click)
+    - [TODO 3 - Add an Event Listener](#todo-3---add-an-event-listener)
+    - [TODO 4 - Increase RAM](#todo-4---increase-ram)
+    - [TODO 5 - Add Autoclicker](#todo-5---add-an-autoclicker)
+    - [TODO 6 - Gain RAM Every Second](#todo-6---gain-ram-every-second)
+    - [TODO 7 - Add More Autoclickers](#todo-7---repeat-todo-5)
 
 ## Overview
 
