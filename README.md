@@ -216,7 +216,9 @@ Next, go ahead and create that function in the functions section of your code. G
 ```js
 function purchaseMicroSD() {
     /*
-        To calculate the cost, you'll have to do some math. Clicker games typically make you advance slower if you just stick with purchasing one item to encourage you to get deeper and deeper into the game. The math behind this involves exponential growth. You'll use the Math.pow() function to help calculate the cost.
+        To calculate the cost, you'll have to do some math. Clicker games typically make you advance slower
+        if you just stick with purchasing one item to encourage you to get deeper and deeper into the game. 
+        The math behind this involves exponential growth. You'll use the Math.pow() function to help calculate the cost.
     */
     var cost = Math.ceil(microSD.baseCost * Math.pow(1.1, microSD.numberOwned));
     // The number 1.1 means that each microSD will be 10% more expensive than the previous one.
@@ -260,7 +262,7 @@ function addAutoRAM() {
     */
 
     // update the text that displays the ram available
-    $("#ram-amount").text("RAM: " + ram + " bytes"); 
+    $("#ram-amount").text("RAM: " + Math.floor(ram) + " bytes"); 
 }
 ```
 
