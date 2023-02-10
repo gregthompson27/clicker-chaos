@@ -1,29 +1,29 @@
-Clicker Chaos
-===
+# Clicker Chaos
 
 # Overview
 
 Create a chaotic clicker game, where you can click to your heart's content.
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Project Installation](#project-installation)
 - [Coding Tips and Tricks](#coding-tips-and-tricks)
 - [Project Steps](#project-steps)
-    - [TODO 0 - Where to Code](#todo-0---where-to-code)
-    - [TODO 1 - Add HTML Attributes](#todo-1---add-attributes-to-your-game)
-    - [TODO 2 - Add an Image](#todo-2---add-an-image-to-click)
-    - [TODO 3 - Add an Event Listener](#todo-3---add-an-event-listener)
-    - [TODO 4 - Increase RAM](#todo-4---increase-ram)
-    - [TODO 5 - Add Autoclicker](#todo-5---add-an-autoclicker)
-    - [TODO 6 - Gain RAM Every Second](#todo-6---gain-ram-every-second)
-    - [TODO 7 - Add More Autoclickers](#todo-7---repeat-todo-5)
+  - [TODO 0 - Where to Code](#todo-0---where-to-code)
+  - [TODO 1 - Add HTML Attributes](#todo-1---add-attributes-to-your-game)
+  - [TODO 2 - Add an Image](#todo-2---add-an-image-to-click)
+  - [TODO 3 - Add an Event Listener](#todo-3---add-an-event-listener)
+  - [TODO 4 - Increase RAM](#todo-4---increase-ram)
+  - [TODO 5 - Add Autoclicker](#todo-5---add-an-autoclicker)
+  - [TODO 6 - Gain RAM Every Second](#todo-6---gain-ram-every-second)
+  - [TODO 7 - Add More Autoclickers](#todo-7---repeat-todo-5)
 
 ## Overview
 
 In this project, you'll be creating a clicker game (sometimes also called idle or incremental games). There really is no purpose of this game, other than to click a button or image to get money (or some other currency), use that money to make more money, and get as much currency as possible.
 
-If you've never played a clicker game before, see a couple examples:-
+If you've never played a clicker game before, see a couple examples:
 
 - [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/)
 - [Canada Clikcer](http://www.canadaclicker.com/)
@@ -42,10 +42,11 @@ As you'll notice from those examples, there are three main components to any cli
 
 To install this project, you'll want to have your gitpod workspace open with the terminal running. Enter the following commands one at a time:
 
-* `git clone https://github.com/gregthompson27/clicker-chaos.git`
-* `chmod +x ./clicker-chaos/setup.sh`
-* `./clicker-chaos/setup.sh`
-* `rm -rf ./clicker-chaos/setup.sh`
+- `cd projects`
+- `git clone https://github.com/gregthompson27/clicker-chaos.git`
+- `chmod +x ./clicker-chaos/setup.sh`
+- `./clicker-chaos/setup.sh`
+- `rm -rf projects/clicker-chaos/setup.sh`
 
 If you'd like to change the name of the project, you can right click on the folder name and select "Rename".
 
@@ -63,7 +64,7 @@ $("#idName").on("click", handlerFunction);
 
 // this function can have any name, just make sure it matches the name of the function from the click event
 function handlerFunction() {
-    // code that you want to run when the corresponding element is clicked
+  // code that you want to run when the corresponding element is clicked
 }
 ```
 
@@ -77,7 +78,7 @@ We'll use a couple different Math functions in this project. Some will be for ro
 
 `Math.pow(x, y)` returns the value of x raised to the power of y, so `Math.pow(3, 4)` returns 81, and `Math.pow(300, 0)` returns 1.
 
-___
+---
 
 ## Project Steps
 
@@ -87,7 +88,7 @@ The `index.html` file contains everything you'll need to get started. You'll be 
 
 The `index.css` file contains some built in CSS properties that will be applied to the page. Feel free to add to, remove from, or edit this file to update the styles of your app.
 
-___
+---
 
 ### Todo 0.5 - Setup and Planning
 
@@ -107,7 +108,7 @@ Give each of these `div`s a class attribute that corresponds with which element 
 - The attribute for the autoclicker `div` should be `autoclicker-box`
 - The attribute for the upgrades `div` should be `upgrade-box`
 
-___
+---
 
 ### Todo 2 - Add an Image to Click
 
@@ -119,9 +120,9 @@ Find the `div` with the `class="clicker-box"` attribute that you added in TODO 1
 
 Next, add a paragraph element either right above or right below your image. This paragraph will hold the text `RAM: 0 bytes`, and it will get an `id="ram-amount"` attribute. Make sure to update your text and id attribute value to match your theme.
 
-Last, add a second paragraph that will keep track of the income per second that is earned through the autoclickers. This paragraph will the text `RAM per second: 0 bytes` 
+Last, add a second paragraph that will keep track of the income per second that is earned through the autoclickers. This paragraph will the text `RAM per second: 0 bytes`
 
-___
+---
 
 ### Todo 3 - Add an Event Listener
 
@@ -137,14 +138,16 @@ And in the functions section:
 
 ```js
 function downloadRAM() {
-    console.log("you clicked the image!");
-    console.log("if only we had a variable to keep track of the amount of RAM...");
+  console.log("you clicked the image!");
+  console.log(
+    "if only we had a variable to keep track of the amount of RAM..."
+  );
 }
 ```
 
 Clicking on the image should now result in two lines being logged to the console. Next, let's add code to start making things happen.
 
-___
+---
 
 ### Todo 4 - Increase RAM
 
@@ -164,7 +167,7 @@ Make sure to change the `"#ram-amount"` argument being passed to the `$` functio
 
 At this point, you should have an image that can be clicked that updates the amount of income you have available. You can click your image forever and ever and ever and ever and the amout of income you have will continue to increase. Next, you'll add some autoclickers that you'll be able to buy to do the clicking for you!
 
-___
+---
 
 ### Todo 5 - Add an Autoclicker
 
@@ -176,12 +179,12 @@ Next, you'll add the autoclicker to your page by adding some html. Find the div 
 
 ```html
 <div class="autoclicker" id="autoclicker1" title="One byte of RAM per second">
-    <p>MicroSD Card</p>
-    <p id="microSD-count">Owned: 0</p>
-    <p id="microSD-cost">Cost: 50</p>
-    <button id="purchase-microSD">BUY ONE</button>
-    <!-- w3schools button styling below: -->
-    <!-- https://www.w3schools.com/css/css3_buttons.asp -->
+  <p>MicroSD Card</p>
+  <p id="microSD-count">Owned: 0</p>
+  <p id="microSD-cost">Cost: 50</p>
+  <button id="purchase-microSD">BUY ONE</button>
+  <!-- w3schools button styling below: -->
+  <!-- https://www.w3schools.com/css/css3_buttons.asp -->
 </div>
 ```
 
@@ -191,20 +194,20 @@ You'll want to create keys for rps (ram per second) gained when buying a microSD
 
 ```js
 var microSD = {
-    rps: 0.5, // each net helps us catch one butterfly per second
-    numberOwned: 0, // we don't have any nets at the beginning of the game
-    basePrice: 50, // the first one costs 50
+  rps: 0.5, // each net helps us catch one butterfly per second
+  numberOwned: 0, // we don't have any nets at the beginning of the game
+  basePrice: 50, // the first one costs 50
 };
 ```
 
-___ 
+---
 
 ### TODO 5.5 - Purchase an Autoclicker
 
 To purchase an autoclicker, we'll add an event listener for the button in the div we just created, and we'll decide on a function name that will be called when we click on that button. The event listener for buying a microSD card will look like this
 
 ```js
-$("#purchase-microSD").on('click', purchaseMicroSD);
+$("#purchase-microSD").on("click", purchaseMicroSD);
 ```
 
 Add the listener to the event listeners section of your code.
@@ -215,32 +218,43 @@ Next, go ahead and create that function in the functions section of your code. G
 
 ```js
 function purchaseMicroSD() {
-    /*
+  /*
         To calculate the cost, you'll have to do some math. Clicker games typically make you advance slower
         if you just stick with purchasing one item to encourage you to get deeper and deeper into the game. 
         The math behind this involves exponential growth. You'll use the Math.pow() function to help calculate the cost.
     */
-    var cost = Math.ceil(microSD.baseCost * Math.pow(1.1, microSD.numberOwned));
-    // The number 1.1 means that each microSD will be 10% more expensive than the previous one.
-    // You'll want to tinker with this number to make sure it gives you the gameplay experience you want (it should probably be greater than 1 and less than 2)
-    // In this example, the first will cost 50, the second 55, and the 50th will cost around 5500.
+  var cost = Math.ceil(microSD.baseCost * Math.pow(1.1, microSD.numberOwned));
+  // The number 1.1 means that each microSD will be 10% more expensive than the previous one.
+  // You'll want to tinker with this number to make sure it gives you the gameplay experience you want (it should probably be greater than 1 and less than 2)
+  // In this example, the first will cost 50, the second 55, and the 50th will cost around 5500.
 
-    if (ram >= cost) {
-        // write a line of code that decreases the ram by the cost
-        // write a second line of code that increases the ramPerSecond variable by microSD's rps value
-        // write another line that increases the microSD variable's numberOwned property by one
+  if (ram >= cost) {
+    // write a line of code that decreases the ram by the cost
+    // write a second line of code that increases the ramPerSecond variable by microSD's rps value
+    // write another line that increases the microSD variable's numberOwned property by one
 
-        // Add code that updates the text of the div that you're working on. Here's an example of updating the number owned text:
-        $("#microSD-count").text("Owned: " + microSD.numberOwned); // Update the text based on the updated numberOwned property
+    // Add code that updates the text of the div that you're working on. Here's an example of updating the number owned text:
+    $("#microSD-count").text("Owned: " + microSD.numberOwned); // Update the text based on the updated numberOwned property
 
-        // Now we'll calculate the cost of the next microsd
-        var newCost = Math.ceil(microSD.baseCost * Math.pow(1.1, microSD.numberOwned));
-        $('#microSD-cost').text("Cost: " + newCost);
-    }
+    // Now we'll calculate the cost of the next microsd
+    var newCost = Math.ceil(
+      microSD.baseCost * Math.pow(1.1, microSD.numberOwned)
+    );
+    $("#microSD-cost").text("Cost: " + newCost);
+  }
 }
 ```
 
-___
+---
+
+#### TODO 5.5 - Fix a Bug
+
+There's a problem with the calculation of the `cost` variable in the function above.
+If you console.log the value of the variable you'll see that it has a value of `NaN` - which stands for `Not a Number`. This usually indicates that we did some calculation with an `undefined` value.
+
+To determine where our error is coming from, console.log the `microSD` variable and check out its properties - based on this, what is wrong with the `Math.ceil(microSD.baseCost * Math.pow(1.1, microSD.numberOwned))` calculation and how can we fix it?
+
+---
 
 ### TODO 6 - Gain RAM Every Second
 
@@ -254,19 +268,19 @@ addAutoRAM is a function that will be demonstrated below that is called, in this
 
 ```js
 function addAutoRAM() {
-    /*
+  /*
         Write a line of code that increases the ram variable by the value stored in the ramPerSecond variable
         
         If you chose a number different than 1000 above for your setInterval timer, you'll have to divide the ramPerSecond value before adding it to the ram.
         For example, if you chose 250, you'll update the ram variable by adding one fourth of the ramPerSecond value.
     */
 
-    // update the text that displays the ram available
-    $("#ram-amount").text("RAM: " + Math.floor(ram) + " bytes"); 
+  // update the text that displays the ram available
+  $("#ram-amount").text("RAM: " + Math.floor(ram) + " bytes");
 }
 ```
 
-___
+---
 
 ### TODO 7 - Repeat TODO 5
 
