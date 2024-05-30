@@ -26,7 +26,7 @@ In this project, you'll be creating a clicker game (sometimes also called idle o
 If you've never played a clicker game before, see a couple examples:
 
 - [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/)
-- [Canada Clikcer](http://www.canadaclicker.com/)
+- [Canada Clicker](http://www.canadaclicker.com/)
 - [Universal Paperclips](https://www.decisionproblem.com/paperclips/index2.html)
 - [Evolve Idle](https://pmotschmann.github.io/Evolve/)
 
